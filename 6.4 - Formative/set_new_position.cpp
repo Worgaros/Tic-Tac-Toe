@@ -1,7 +1,10 @@
 #include "set_new_position.h"
 
-bool SetNewPosition(char board[][3], int row, int colum)
+bool SetNewPosition(std::vector<char>& board, char& turn)
 {
+	int userInput = 0;
+	bool emptyCase = true;
+
 	if (turn == 'X') {
 		std::cout << "\n\tPlayer - 1 [X] turn : ";
 	}
@@ -9,16 +12,32 @@ bool SetNewPosition(char board[][3], int row, int colum)
 		std::cout << "\n\tPlayer - 2 [O] turn : ";
 	}
 
-	std::cin >> choice;
+	std::cin >> userInput;
 
-	if (row <= 3 && row >= 1 && colum <= 3 && colum >= 1) {
-		if (board[row - 1][1 - colum] != '_')
-			std::cout << "Case deja pleine !  \n\n";
-		else
-			return true;
+	if (userInput < 0 || userInput > 8)
+	{
+		std::cout << "Invalid choice\n";
+		return false;
 	}
-	else
-		std::cout << "Wrong  ! \n\n";
 
-	return false;
+	if (turn == 'X' && board[userInput] != 'X' && board[userInput] != 'O')
+	{
+		board[userInput] = 'X';
+		turn = 'O';
+		emptyCase = true;
+	}
+
+	else if (turn == 'O' && board[userInput] != 'X' && board[userInput] != 'O')
+	{
+		board[userInput] = 'O';
+		turn = 'X';
+		emptyCase = true;
+	}
+
+	else
+	{
+		std::cout << "This case is already filled ! Select another !";
+		return false;
+	}
+	return true;
 }

@@ -1,15 +1,14 @@
 #include "generate_map.h"
 
-void GenerateMap(char board[][3])
-{ //Dessine la map
-	std::cout << "PLAYER - 1 [X]\t PLAYER - 2 [O]\n\n";
-	std::cout << "\t\t     |     |     \n";
-	std::cout << "\t\t  " << board[0][0] << "  | " << board[0][1] << "   |  " << board[0][2] << " \n";
-	std::cout << "\t\t_____|_____|_____\n";
-	std::cout << "\t\t     |     |     \n";
-	std::cout << "\t\t  " << board[1][0] << "  | " << board[1][1] << "   |  " << board[1][2] << " \n";
-	std::cout << "\t\t_____|_____|_____\n";
-	std::cout << "\t\t     |     |     \n";
-	std::cout << "\t\t  " << board[2][0] << "  | " << board[2][1] << "   |  " << board[2][2] << " \n";
-	std::cout << "\t\t     |     |     \n";
+void GenerateMap(std::vector<char>& board)
+{ 
+	board.push_back('0');
+	board.push_back('1');
+	board.push_back('2');
+	board.push_back('3');
+	board.push_back('4');
+	board.push_back('5');
+	board.push_back('6');
+	board.push_back('7');
+	board.push_back('8');
 }
