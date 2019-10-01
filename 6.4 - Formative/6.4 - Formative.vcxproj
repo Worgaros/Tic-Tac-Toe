@@ -123,7 +123,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="check_win.cpp" />
+    <ClCompile Include="generate_map.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="play_game.cpp" />
+    <ClCompile Include="set_new_position.cpp" />
+    <ClCompile Include="show_map.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="check_win.h" />
+    <ClInclude Include="generate_map.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="play_game.h" />
+    <ClInclude Include="set_new_position.h" />
+    <ClInclude Include="show_map.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
