@@ -6,10 +6,10 @@ bool SetNewPosition(std::vector<char>& board, char& turn)
 	bool emptyCase = true;
 
 	if (turn == 'X') {
-		std::cout << "\n\tPlayer - 1 [X] turn : ";
+		std::cout << "\nPlayer - 1 [X] turn : ";
 	}
 	else if (turn == 'O') {
-		std::cout << "\n\tPlayer - 2 [O] turn : ";
+		std::cout << "\nPlayer - 2 [O] turn : ";
 	}
 
 	std::cin >> userInput;
